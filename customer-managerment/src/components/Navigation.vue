@@ -4,7 +4,9 @@
     <div class="container-fluid">\
         <ul class="nav navbar-nav">
             <li><a href="#">Home</a></li>
-            <li v-for="route in routes" v-if="route.visible"><a v-bind:href="'#'+route.path">{{route.title}}</a></li>
+            <li v-for="route in routes" v-if="route.visible">
+              <router-link v-bind:to="{ 'path' : route.path }">{{route.title}}</router-link>
+            </li>
         </ul>
     </div>
 </nav>
