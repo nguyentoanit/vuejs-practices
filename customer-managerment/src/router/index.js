@@ -3,6 +3,7 @@ import Router from "vue-router";
 import HelloWorld from "@/components/HelloWorld";
 import Users from "@/components/user/Users";
 import User from "@/components/user/User";
+import Word from "@/components/word/Word";
 
 Vue.use(Router);
 
@@ -29,6 +30,13 @@ export default new Router({
       title: "User",
       visible: false,
       component: User
+    },
+    {
+      path: "/word",
+      name: "Word",
+      title: "Word",
+      visible: true,
+      component: Word
     }
   ]
 });
