@@ -3,17 +3,24 @@
     <h1>{{ msg }}</h1>
     <div class="form-group">
       <label for="word">Add word:</label>
-      <input type="word" class="form-control" v-model="word" />
+      <input type="word" class="form-control" v-model="word">
     </div>
-    <input v-on:click="addWord(word)" type="button" class="btn btn-info" value="Submit" />
+    <input v-on:click="addWord(word)" type="button" class="btn btn-info" value="Submit">
     <div>
-      <br/>
+      <br>
       Store: {{getWord}}
     </div>
     <div>
-      <br>
-      Result:
-      <div v-for="value in getWord">{{value}}&nbsp;<input v-on:click="deleteWord(value)" class="btn btn-danger" type="button" value="x"></div>
+      <br>Result:
+      <div v-for="value in getWord">
+        {{value}}&nbsp;
+        <input
+          v-on:click="deleteWord(value)"
+          class="btn btn-danger"
+          type="button"
+          value="x"
+        >
+      </div>
     </div>
   </div>
 </template>

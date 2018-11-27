@@ -1,7 +1,7 @@
 <template>
   <div class="row">
-      <h1>{{ msg }}</h1>
-      {{$route.params.id}}
+    <h1>{{ msg }}</h1>
+    {{$route.params.id}}
   </div>
 </template>
 

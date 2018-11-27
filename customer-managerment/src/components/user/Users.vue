@@ -16,7 +16,9 @@
             <th scope="row">{{ user.id }}</th>
             <td>{{ user.first_name }}</td>
             <td>{{ user.last_name }}</td>
-            <td><img v-bind:src="user.avatar"></td>
+            <td>
+              <img v-bind:src="user.avatar">
+            </td>
           </tr>
         </tbody>
       </table>
