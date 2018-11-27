@@ -39,7 +39,8 @@ export default {
   mounted() {
     axios
       .get("https://reqres.in/api/users?page=1")
-      .then(response => (this.users = response.data.data));
+      .then(response => (this.users = response.data.data))
+      .catch(error => alert("Error: " + error));
   }
 };
 </script>
