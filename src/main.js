@@ -4,27 +4,9 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import store from './store';
-import VueI18n from 'vue-i18n';
-import en from './lang/en';
-import jp from './lang/jp';
-import fr from './lang/fr';
-Vue.use(VueI18n);
+import i18n from './lang/lang';
 
 Vue.config.productionTip = false;
-const messages = {
-  en: en,
-  jp: jp,
-  fr: fr
-};
-
-const locale = 'jp';
-
-// Create VueI18n instance with options
-const i18n = new VueI18n({
-  locale, // set locale
-  messages // set locale messages
-});
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   i18n,
