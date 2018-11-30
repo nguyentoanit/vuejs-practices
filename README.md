@@ -1,4 +1,4 @@
-# Vue JS Practice
+# Customer Management
 
 > A Vue.js project
 
