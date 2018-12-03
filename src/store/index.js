@@ -6,19 +6,13 @@ Vue.use(Vuex);
 const debug = process.env.NODE_ENV !== 'production';
 
 export default new Vuex.Store({
-  state: {
-    locale: 'en'
-  },
+  state: {},
   getters: {
     getLocale: state => {
       return state.locale;
     }
   },
-  mutations: {
-    setLocale(state, locale) {
-      state.locale = locale;
-    }
-  },
+  mutations: {},
   modules: {
     word: word
   }

@@ -7,6 +7,9 @@
             <router-link v-bind:to="{ 'path' : route.path }">{{route.title}}</router-link>
           </li>
         </ul>
+        <select id="locale" v-model="$i18n.locale">
+          <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
+        </select>
       </div>
     </nav>
   </div>
@@ -17,11 +20,16 @@ export default {
   name: "Navigation",
   data() {
     return {
-      routes: this.$router.options.routes
+      routes: this.$router.options.routes,
+      langs: ["en", "fr", "jp"]
     };
   }
 };
 </script>
 
 <style scoped>
+#locale {
+  float: right;
+  margin-top: 13px;
+}
 </style>

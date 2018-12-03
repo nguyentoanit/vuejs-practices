@@ -6,8 +6,7 @@ import jp from './jp';
 import fr from './fr';
 Vue.use(VueI18n);
 
-const locale = store.getters.getLocale;
-console.log(store);
+const locale = 'en';
 const messages = {
   en: en,
   jp: jp,
