@@ -11,5 +11,10 @@ export default {
     add: 'Add',
     store: 'Store',
     result: 'Result'
+  },
+  navigation: {
+    home: 'Home',
+    users: 'Users',
+    testVuex: 'Vuex Test'
   }
 };

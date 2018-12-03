@@ -11,5 +11,10 @@ export default {
     add: 'Ajouter',
     store: 'le magasin',
     result: 'Résultat'
+  },
+  navigation: {
+    home: 'Accueil',
+    users: 'Utilisateurs',
+    testVuex: 'Vuex Test'
   }
 };

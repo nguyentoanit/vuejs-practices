@@ -11,5 +11,10 @@ export default {
     add: '追加する',
     store: '格納',
     result: '結果'
+  },
+  navigation: {
+    home: 'ホーム',
+    users: 'ユーザー',
+    testVuex: 'Vuexテスト'
   }
 };

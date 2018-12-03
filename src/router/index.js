@@ -13,28 +13,28 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      title: 'Home',
+      title: 'home',
       visible: true,
       component: HelloWorld
     },
     {
       path: '/users',
       name: 'Users',
-      title: 'Users',
+      title: 'users',
       visible: true,
       component: Users
     },
     {
       path: '/user/:id',
       name: 'User',
-      title: 'User',
+      title: 'user',
       visible: false,
       component: User
     },
     {
       path: '/word',
       name: 'Word',
-      title: 'Word',
+      title: 'testVuex',
       visible: true,
       component: Word
     }
