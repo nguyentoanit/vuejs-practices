@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <ul class="nav navbar-nav">
           <li v-for="route in routes" v-if="route.visible">
-            <router-link v-bind:to="{ 'path' : route.path }">{{route.title}}</router-link>
+            <router-link v-bind:to="{ 'path' : route.path }">{{ $t("navigation."+route.title) }}</router-link>
           </li>
         </ul>
         <select id="locale" v-model="$i18n.locale">

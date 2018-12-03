@@ -1,14 +1,14 @@
-<template>
+  <template>
   <div class="row">
     <div class="hello">
-      <h1>{{ msg }}</h1>
+      <h1>{{ $t("message.welcomeUserPage") }}</h1>
       <table class="table">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Avatar</th>
+            <th scope="col">{{ $t("message.firstName") }}</th>
+            <th scope="col">{{ $t("message.lastName") }}</th>
+            <th scope="col">{{ $t("message.avatar") }}</th>
           </tr>
         </thead>
         <tbody>
@@ -32,7 +32,6 @@ export default {
   name: "Users",
   data() {
     return {
-      msg: "Welcome to Users Page",
       users: {}
     };
   },

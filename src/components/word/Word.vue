@@ -1,17 +1,18 @@
 <template>
   <div class="row">
-    <h1>{{ msg }}</h1>
+    <h1>{{ $t("message.testVuex") }}</h1>
     <div class="form-group">
-      <label for="word">Add word:</label>
+      <label for="word">{{ $t("message.content") }}:</label>
       <input type="word" class="form-control" v-model="word">
     </div>
-    <input v-on:click="addWord(word)" type="button" class="btn btn-info" value="Submit">
+    <input @click="addWord(word)" :value="$t('message.content')" type="button" class="btn btn-info">
     <div>
       <br>
-      Store: {{getWord}}
+      {{$t("message.store")}}: {{getWord}}
     </div>
     <div>
-      <br>Result:
+      <br>
+      {{$t("message.result")}}:
       <div v-for="value in getWord">
         {{value}}&nbsp;
         <input
@@ -31,7 +32,6 @@ export default {
   name: "Word",
   data() {
     return {
-      msg: "Test Vuex",
       word: ""
     };
   },
