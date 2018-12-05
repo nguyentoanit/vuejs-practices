@@ -1,29 +1,31 @@
-  <template>
-  <div class="row">
-    <div class="hello">
-      <h1>{{ $t("message.welcomeUserPage") }}</h1>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">{{ $t("message.firstName") }}</th>
-            <th scope="col">{{ $t("message.lastName") }}</th>
-            <th scope="col">{{ $t("message.avatar") }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="user in users">
-            <th scope="row">{{ user.id }}</th>
-            <td>{{ user.first_name }}</td>
-            <td>{{ user.last_name }}</td>
-            <td>
-              <img v-bind:src="user.avatar">
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<template>
+  <b-row>
+    <b-col>
+      <div class="hello">
+        <h1>{{ $t("message.welcomeUserPage") }}</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">{{ $t("message.firstName") }}</th>
+              <th scope="col">{{ $t("message.lastName") }}</th>
+              <th scope="col">{{ $t("message.avatar") }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="user in users">
+              <th scope="row">{{ user.id }}</th>
+              <td>{{ user.first_name }}</td>
+              <td>{{ user.last_name }}</td>
+              <td>
+                <img v-bind:src="user.avatar">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </b-col>
+  </b-row>
 </template>
 
 <script>
@@ -32,7 +34,8 @@ export default {
   name: "Users",
   data() {
     return {
-      users: {}
+      fields: ["first_name", "last_name", "avatar"],
+      users: []
     };
   },
   mounted() {

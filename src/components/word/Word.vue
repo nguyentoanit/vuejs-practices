@@ -1,28 +1,28 @@
 <template>
-  <div class="row">
-    <h1>{{ $t("message.testVuex") }}</h1>
-    <div class="form-group">
-      <label for="word">{{ $t("message.content") }}:</label>
-      <input type="word" class="form-control" v-model="word">
-    </div>
-    <input @click="addWord(word)" :value="$t('message.content')" type="button" class="btn btn-info">
-    <div>
-      <br>
-      {{$t("message.store")}}: {{getWord}}
-    </div>
-    <div>
-      <br>
-      {{$t("message.result")}}:
+  <div>
+    <b-row>
+      <h1 style="margin: 0 auto;">{{ $t("message.testVuex") }}</h1>
+    </b-row>
+    <b-row>
+      <b-form inline>
+        <label for="word">{{ $t("message.content") }}:</label>
+        <b-form-input v-model="word"></b-form-input>
+        <!-- <input class="btn btn-info"> -->
+        <b-button
+          :disabled="word == ''"
+          @click="addWord(word); word=''"
+          variant="success"
+        >{{$t('message.content')}}</b-button>
+      </b-form>
+    </b-row>
+    <b-row>{{$t("message.store")}}: {{getWord}}</b-row>
+    <b-row>{{$t("message.result")}}:</b-row>
+    <b-row>
       <div v-for="value in getWord">
-        {{value}}&nbsp;
-        <input
-          v-on:click="deleteWord(value)"
-          class="btn btn-danger"
-          type="button"
-          value="x"
-        >
+        {{value}}
+        <b-button @click="deleteWord(value)" variant="danger">x</b-button>
       </div>
-    </div>
+    </b-row>
   </div>
 </template>
 
