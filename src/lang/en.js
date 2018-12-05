@@ -13,6 +13,7 @@ export default {
     result: 'Result'
   },
   navigation: {
+    lang: 'Language',
     home: 'Home',
     users: 'Users',
     testVuex: 'Vuex Test'

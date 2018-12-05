@@ -1,17 +1,20 @@
 <template>
-  <div>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li v-for="route in routes" v-if="route.visible">
-            <router-link v-bind:to="{ 'path' : route.path }">{{ $t("navigation."+route.title) }}</router-link>
-          </li>
-        </ul>
-        <select id="locale" v-model="$i18n.locale">
-          <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
-        </select>
-      </div>
-    </nav>
+  <div class="container-fluid">
+    <b-navbar type="dark" variant="primary" toggleable>
+      <b-navbar-toggle target="nav_dropdown_collapse"></b-navbar-toggle>
+      <b-collapse is-nav id="nav_dropdown_collapse">
+        <b-navbar-nav>
+          <b-nav-item
+            v-for="route in routes"
+            v-if="route.visible"
+            :href="'#'+route.path"
+          >{{ $t("navigation."+route.title) }}</b-nav-item>
+          <b-nav-item-dropdown text="Language" right>
+            <b-dropdown-item v-for="(lang, i) in langs" @click="$i18n.locale = lang">{{ lang }}</b-dropdown-item>
+          </b-nav-item-dropdown>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
   </div>
 </template>
 
@@ -28,8 +31,4 @@ export default {
 </script>
 
 <style scoped>
-#locale {
-  float: right;
-  margin-top: 13px;
-}
 </style>
