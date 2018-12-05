@@ -39,7 +39,7 @@ export default {
     axios
       .get("https://reqres.in/api/users?page=1")
       .then(response => (this.users = response.data.data))
-      .catch(error => alert("Error: " + error));
+      .catch(error => alert(error));
   }
 };
 </script>
