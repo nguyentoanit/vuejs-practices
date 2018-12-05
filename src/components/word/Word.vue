@@ -11,7 +11,7 @@
         <b-button
           :disabled="word == ''"
           @click="addWord(word); word=''"
-          variant="success"
+          variant="info"
         >{{$t('message.content')}}</b-button>
       </b-form>
     </b-row>
