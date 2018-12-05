@@ -29,20 +29,19 @@
 </template>
 
 <script>
-import axios from "axios";
+import userAPI from "../../api/user";
 export default {
   name: "Users",
   data() {
     return {
-      fields: ["first_name", "last_name", "avatar"],
       users: []
     };
   },
-  mounted() {
-    axios
-      .get("https://reqres.in/api/users?page=1")
+  created() {
+    userAPI
+      .getUsers()
       .then(response => (this.users = response.data.data))
-      .catch(error => alert(error));
+      .catch(error => console.log(error));
   }
 };
 </script>
