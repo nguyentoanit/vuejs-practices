@@ -1,16 +1,19 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld';
-import Users from '@/components/user/Users';
-import User from '@/components/user/User';
-import Word from '@/components/word/Word';
+// import HelloWorld from '@/components/HelloWorld';
+// import Users from '@/components/user/Users';
+// import User from '@/components/user/User';
+// import Word from '@/components/word/Word';
+const HelloWorld = () => import('@/components/HelloWorld')
+const Users = () => import('@/components/user/Users')
+const User = () => import('@/components/user/User')
+const Word = () => import('@/components/word/Word')
 
 Vue.use(Router);
 
 export default new Router({
   // mode: 'history',
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'HelloWorld',
       title: 'home',

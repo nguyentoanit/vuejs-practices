@@ -18,7 +18,7 @@
     <b-row>{{$t("message.store")}}: {{getWord}}</b-row>
     <b-row>{{$t("message.result")}}:</b-row>
     <b-row>
-      <div v-for="value in getWord">
+      <div v-for="value in getWord" :key="value">
         {{value}}
         <b-button @click="deleteWord(value)" variant="danger">x</b-button>
       </div>
